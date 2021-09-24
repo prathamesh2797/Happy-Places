@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddHappyPlaces">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tool_bar_add_place"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:theme="@style/CustomToolBarStyle"
+        app:titleTextColor="@color/white"
+        android:background="@color/bright_navy_blue">
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tool_bar_add_place">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar"
+            >
+
+
+            <LinearLayout
+                android:id="@+id/ll_layout_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:boxStrokeColor="@color/bright_navy_blue"
+                    app:hintTextColor="@color/bright_navy_blue"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/et_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Title"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:boxStrokeColor="@color/bright_navy_blue"
+                    app:hintTextColor="@color/bright_navy_blue"
+                    android:layout_marginTop="5dp"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/et_description"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Description"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:boxStrokeColor="@color/bright_navy_blue"
+                    app:hintTextColor="@color/bright_navy_blue"
+                    android:layout_marginTop="5dp"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/et_date"
+                        android:layout_width="match_parent"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:layout_height="wrap_content"
+                        android:hint="Date"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:boxStrokeColor="@color/bright_navy_blue"
+                    app:hintTextColor="@color/bright_navy_blue"
+                    android:layout_marginTop="5dp"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/et_location"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Location"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/tv_search_on_map"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:text="Search On Map"
+                    android:textColor="@color/bright_navy_blue"/>
+
+
+                <Button
+                    android:id="@+id/btn_get_current_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Get Current Location"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/btn_get_current_location_background"
+                    android:elevation="@dimen/cardview_default_elevation"
+                    android:padding="5dp"
+                    android:textColor="@color/bright_navy_blue"/>
+
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_layout_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_layout_1"
+                android:layout_marginTop="10dp"
+                android:weightSum="2"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/iv_add_places"
+                    android:layout_width="fill_parent"
+                    android:layout_height="200dp"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:layout_gravity="center"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/gallery" />
+
+                <TextView
+                    android:id="@+id/tv_add_image"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:text="ADD IMAGE"
+                    android:textSize="18sp"
+                    android:textColor="@color/bright_navy_blue"
+                    android:textStyle="bold"
+                    android:layout_weight="1"
+                    android:textAlignment="center"
+                    android:gravity="center"/>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_save"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="50dp"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/ll_layout_2"
+                android:background="@drawable/btn_background"
+                android:text="SAVE"
+                android:backgroundTint="@color/bright_navy_blue"
+                android:textColor="@color/white"
+                android:padding="10dp"
+                android:textSize="18sp"/>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+    
+
+
+</RelativeLayout>
